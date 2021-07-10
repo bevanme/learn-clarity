@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ClarityIcons, homeIcon } from '@cds/core/icon';
+
+import '@cds/core/icon/register.js';
 
 @Component({
   selector: 'clr-root',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'learn-clarity';
+  title = 'angular-cli';
+
+  constructor() {
+    ClarityIcons.addIcons(homeIcon);
+  }
 }
+
